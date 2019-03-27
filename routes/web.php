@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("personal", "formController@show");
+//Route::get("personal", "formController@show");
 
 Route::resource("admission","AdmissionController");

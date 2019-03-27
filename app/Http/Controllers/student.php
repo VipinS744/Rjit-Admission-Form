@@ -3,24 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\AdmissionController;
-use App\student;
+use app\Http\Controllers\student;
 
-class AdmissionController extends Controller
+class student extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-    //public function show(){
-      //  return view("personal");
-    //}
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -30,8 +24,7 @@ class AdmissionController extends Controller
      */
     public function create()
     {
-   // echo "mohit"; 
-       return view("welcome");
+        //
     }
 
     /**
@@ -42,11 +35,6 @@ class AdmissionController extends Controller
      */
     public function store(Request $request)
     {
-    /*    $data=validator::make($request->all(),[
-            "email"=>"unique:students|email"
-        ],[
-             //"email.required"=>"email is needed",
-             "email.email"=>"email should be valid email"])->validate();*/
         $obj=new student;
         $obj->f_name=$request->first_name;
         $obj->l_name=$request->last_name;
@@ -80,12 +68,12 @@ class AdmissionController extends Controller
         $obj->phy_hand=$request->Handicapped;
         $obj->resi_jk=$request->jkresident;
         $obj->orga=$request->organisation;
-        $obj->house_no=$request->house_no;
-        $obj->street=$request->street_name;
-        $obj->landmark=$request->landmark;
-        $obj->city=$request->city;
-        $obj->state=$request->state;
-        $obj->pin=$request->pincode;
+        $obj->co_house_no=$request->house_no;
+        $obj->co_street=$request->street_name;
+        $obj->co_landmark=$request->landmark;
+        $obj->co_city=$request->city;
+        $obj->co_state=$request->state;
+        $obj->co_pin=$request->pincode;
         $obj->pe_house_no=$request->pahouse_no;
         $obj->pe_street=$request->pastreet_name;
         $obj->pe_landmark=$request->palandmark;
@@ -94,19 +82,14 @@ class AdmissionController extends Controller
         $obj->pe_pin=$request->papincode;
         
         $obj->created_dt=date("y-m-d h-i-s");
-
-        echo "this is store";
-
-        $is_saved = $obj->save();
+        $is_saved=$obj->save();
         if($is_saved)
         {
             session()->flash("studentMessage","student is entered ");
-            return redirect("submission");
+
         }
-        else{
-            return redirect("welcome");
-        }
-        
+        return redirect("action");
+       echo "this is store";
     }
 
     /**

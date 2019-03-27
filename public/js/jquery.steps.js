@@ -226,7 +226,7 @@ function decreaseCurrentIndexBy(state, decreaseBy)
  * @method destroy
  * @param wizard {Object} A jQuery wizard object
  **/
-function destroy(wizard, options)
+function destroy(wizard , options)
 {
     var eventNamespace = getEventNamespace(wizard);
 
@@ -835,7 +835,7 @@ function refreshPagination(wizard, options, state)
             finish._enableAria(state.stepCount > 0);
             next._enableAria(state.stepCount > 1 && state.stepCount > (state.currentIndex + 1));
         }
-        else
+        // else
         {
             finish._showAria(options.enableFinishButton && state.stepCount === (state.currentIndex + 1));
             next._showAria(state.stepCount === 0 || state.stepCount > (state.currentIndex + 1)).
@@ -1319,6 +1319,7 @@ $.fn.steps = function (method)
     }
     else if (typeof method === "object" || !method)
     {
+        
         return initialize.apply(this, arguments);
     }
     else
