@@ -118,6 +118,11 @@ function validate(){
             document.getElementById("aadhar_msg").innerHTML="";
             }
 
+        if(isNaN(aadhar_msg)) {
+          document.getElementById("aadhar_msg").innerHTML="** alphabat not allowed ";
+          return false; 
+         }
+
 
          if(tenthschool==""){
           document.getElementById("ten_school_msg").innerHTML="** Please fill 10th School Name";
@@ -174,6 +179,46 @@ function validate(){
 
          if(twpercentage==""){
           document.getElementById("tw_percentage_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(twrollno==""){
+          document.getElementById("tw_rollno_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(jeerollno==""){
+          document.getElementById("jee_rollno_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(twrollno==""){
+          document.getElementById("tw_rollno_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(nationality==""){
+          document.getElementById("nationality_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(religion==""){
+          document.getElementById("religion_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(category==""){
+          document.getElementById("category_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(handicapped==""){
+          document.getElementById("handicapped_msg").innerHTML="** Please fill 12th %";
+          return false;
+         }
+
+         if(jkresident==""){
+          document.getElementById("jkresident_msg").innerHTML="** Please fill 12th %";
           return false;
          }
 
