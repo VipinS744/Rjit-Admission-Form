@@ -5,6 +5,26 @@ body {
     background-size: cover;
 }
 
+#other_religion{
+    display: none;
+}
+
+.submit_button{
+    width: 175px;
+    height: 35px;
+    background-color: green;
+    justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+}
+
 .page-content {
 	width: 100%;
 	margin:  0 auto;

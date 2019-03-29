@@ -95,7 +95,7 @@ class AdmissionController extends Controller
         
         $obj->created_dt=date("y-m-d h-i-s");
 
-        echo "this is store";
+        // echo "this is store";
 
         $is_saved = $obj->save();
         if($is_saved)

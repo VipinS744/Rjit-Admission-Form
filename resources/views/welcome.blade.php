@@ -309,7 +309,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Subjects</legend>
-                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" value="{{old('tw_subjects')}}" placeholder="" required>
+                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" value="{{old('tw_subjects')}}" placeholder=" PCM/PBM" required>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -368,12 +368,13 @@
                                 <div class="form-row">
                                     <select class="form-control" name="Religion" id="Religion" value="{{old('Religion')}}" required>
                                         <option disabled selected>Religion</option>
-                                        <option value="Hindu">Hindu</option>
-                                        <option value="Muslim">Muslim</option>
-                                        <option value="Sikh">Sikh</option>
-                                        <option value="Christian">Christian</option>
-                                        <option value="Others">Others</option>
+                                        <option value="1">Hindu</option>
+                                        <option value="2">Muslim</option>
+                                        <option value="3">Sikh</option>
+                                        <option value="4">Christian</option>
+                                        <option value="5">Others</option>
                                     </select>
+                                    <input type="text" name="other_religion" id="other_religion" class="form-control">
                                 </div>
                                 <br>
                                 <div class="form-row">
@@ -464,7 +465,7 @@
                                         </fieldset>
                                     </div>
                                 </div>
-                                <input type="checkbox" name="same_address" value="yes" onclick="address_copy()";>Same as Above Address<br>
+                                <input type="checkbox" name="same_address" value="yes" onclick="add_copy(this.form)";>Same as Above Address<br>
                                 <label class="special-label">Permanent Address</label>
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
@@ -567,8 +568,10 @@
                                 <br>
                                 <br>    
                                 <div class="form-row">
-                                    <!-- <button type="button" class="btn btn-primary btn-lg" name="preview">Preview</button> -->
-                                    <input type="submit" name="submit" value="submit">
+                                    <button type="submit" class="btn btn-primary btn-lg" name="preview">Preview</button>
+                                    <center>
+                                        <!-- <input type="submit" name="submit" class="submit_button" value="submit"> -->
+                                    </center>
                                     <!-- <button type="button" class="btn btn-primary btn-lg" value="submit">submit</button> -->
                                 </div>
                                 </div>
