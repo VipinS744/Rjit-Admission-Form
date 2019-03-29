@@ -48,50 +48,158 @@ $('#Religion').on('change', function(){
 });
 
 
+    // forms validation
+
 function validate(){
+
     var fathername=document.getElementById("Father_name").value;
+    var mothername=document.getElementById("Mother_name").value;
+    var fatherphone=document.getElementById("Father_phone").value;
+    var aadhar=document.getElementById("aadhar").value;
+    var tenthschool=document.getElementById("ten_school").value;
+    var tenthboard=document.getElementById("ten_board").value;
+    var tenthsubjects=document.getElementById("ten_subjects").value;
+    var tenthpassing=document.getElementById("ten_passing").value;
+    var tenthpercentage=document.getElementById("ten_percentage").value;
+    var twschool=document.getElementById("tw_school").value;
+    var twboard=document.getElementById("tw_board").value;
+    var twsubjects=document.getElementById("tw_subjects").value;
+    var twpassing=document.getElementById("tw_passing").value;
+    var twpercentage=document.getElementById("tw_percentage").value;
+    var twrollno=document.getElementById("tw_rollno").value;
+    var jeerollno=document.getElementById("jee_main_rollno").value;
+    var nationality=document.getElementById("Nationality").value;
+    var religion=document.getElementById("Religion").value;
+    var category=document.getElementById("Category").value;
+    var handicapped=document.getElementById("Handicapped").value;
+    var jkresident=document.getElementById("jkresident").value;
+    
+
+
 
     if(fathername==""){
           document.getElementById("father_name_msg").innerHTML="** Please fill Father Name";
           return false;
          }
-}
+         else{
+            document.getElementById("father_name_msg").innerHTML="";
+            }
 
 
-function validatefields(){
-
-    var fathername=document.getElementById("Father_name").value;
-       var mothername=document.getElementById("Mother_name").value;
-       var fatherphone=document.getElementById("Father_phone").value;
-       var aadhar=document.getElementById("aadhar").value;
-       var tenthschool=document.getElementById("ten_school").value;
-
-       if(fathername==""){
-          document.getElementById("father_name_msg").innerHTML="** Please fill Father Name";
-          return false;
-         }
-
-       if(mothername==""){
+    if(mothername==""){
           document.getElementById("mother_name_msg").innerHTML="** Please fill Mother Name";
           return false;
          }
+         else{
+            document.getElementById("mother_name_msg").innerHTML="";
+            }
 
 
        if(fatherphone==""){
-          document.getElementById("father_phone_msg").innerHTML="** Please fill Father's Phone Number";
+          document.getElementById("father_no_msg").innerHTML="** Please fill Father's Phone Number";
+          return false;
+         }
+         else{
+            document.getElementById("father_no_msg").innerHTML="";
+            }
+
+
+       if(isNaN(fatherphone)) {
+          document.getElementById("father_no_msg").innerHTML="** alphabat not allowed ";
+          return false; 
+         }
+
+
+         if(aadhar==""){
+          document.getElementById("aadhar_msg").innerHTML="** Please fill Aadhar Number";
+            return false;
+         }
+          else{
+            document.getElementById("aadhar_msg").innerHTML="";
+            }
+
+
+         if(tenthschool==""){
+          document.getElementById("ten_school_msg").innerHTML="** Please fill 10th School Name";
+            return false;
+         }
+          else{
+            document.getElementById("ten_school_msg").innerHTML="";
+            }
+
+
+         if(tenthboard==""){
+          document.getElementById("ten_board_msg").innerHTML="** Please fill 10th Board Name";
+            return false;
+        }
+          else{
+            document.getElementById("teb_board_msg").innerHTML="";
+            }
+
+
+         if(tenthsubjects==""){
+          document.getElementById("ten_subjects_msg").innerHTML="** Please fill 10th Subjects";
+                return false;
+            }
+
+         if(tenthpassing==""){
+          document.getElementById("ten_passing_msg").innerHTML="** Please fill 10th Passing year";
+          return false;
+         }
+
+         if(tenthpercentage==""){
+          document.getElementById("ten_percentage_msg").innerHTML="** Please fill 10th %";
+          return false;
+         }
+
+         if(twschool==""){
+          document.getElementById("tw_school_msg").innerHTML="** Please fill 12th School Name";
+          return false;
+         }
+
+         if(twboard==""){
+          document.getElementById("tw_board_msg").innerHTML="** Please fill 12th Board Name";
+          return false;
+         }
+
+         if(twsubjects==""){
+          document.getElementById("tw_subjects_msg").innerHTML="** Please fill 12th Subjects";
+          return false;
+         }
+
+         if(twpassing==""){
+          document.getElementById("tw_passing_msg").innerHTML="** Please fill 12th Passing year";
+          return false;
+         }
+
+         if(twpercentage==""){
+          document.getElementById("tw_percentage_msg").innerHTML="** Please fill 12th %";
           return false;
          }
 
 
-       if(mobile=="") {
-          document.getElementById("mobilemsg").innerHTML="** Please fill Mobile Field";
-          return false;
-         }
 
-       if(isNaN(mobile)) {
-          document.getElementById("mobilemsg").innerHTML="** alphabat not allowed ";
-          return false;
-         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+        // forms validation Ends
 
 

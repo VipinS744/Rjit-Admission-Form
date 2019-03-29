@@ -179,8 +179,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father's Name</legend>
-                                            <input type="text" name="Father_name" id="Father_name" class="form-control" placeholder="Enter Full Name" keyup="validate()" value="{{old('Father_name')}}" required>
-                                            <span id="father_name_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="Father_name" id="Father_name" class="form-control" placeholder="Enter Full Name" onkeydown="validate()" value="{{old('Father_name')}}" required>
+                                            <small id="father_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -188,8 +188,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Mother's Name</legend>
-                                            <input type="text" class="form-control" id="Mother_name" name="Mother_name" placeholder="Enter Full Name" value="{{old('Mother_name')}}" required>
-                                            <span id="mother_name_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="Mother_name" name="Mother_name" onkeydown="validate()" placeholder="Enter Full Name" value="{{old('Mother_name')}}" required>
+                                            <small id="mother_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -205,8 +205,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father's Contact Number</legend>
-                                            <input type="text" class="form-control" id="Father_phone" name="Father_phone" placeholder="888-999-7777" value="{{old('Father_phone')}}" maxlength="10" required>
-                                            <span id="father_no_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="Father_phone" name="Father_phone" onkeydown="validate()" placeholder="888-999-7777" value="{{old('Father_phone')}}" maxlength="10" required>
+                                            <small id="father_no_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -214,8 +214,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Aadhaar Number</legend>
-                                            <input type="text" class="form-control" id="aadhar" name="aadhar" placeholder="" maxlength="12" value="{{old('aadhar')}}" required>
-                                            <span id="aadharmsg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="aadhar" name="aadhar" placeholder="" onkeydown="validate()" maxlength="12" value="{{old('aadhar')}}" required>
+                                            <small id="aadhar_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -244,8 +244,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>School/College Name</legend>
-                                            <input type="text" name="ten_school" id="ten_school" class="form-control" value="{{old('ten_school')}}" required>
-                                            <span id="ten_school_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="ten_school" onkeydown="validate()" id="ten_school" class="form-control" value="{{old('ten_school')}}" required>
+                                            <small id="ten_school_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -253,8 +253,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Board</legend>
-                                            <input type="text" class="form-control" value="{{old('ten_board')}}" id="ten_board" name="ten_board" required>
-                                            <span id="ten_board_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" value="{{old('ten_board')}}" id="ten_board" onkeydown="validate()" name="ten_board" required>
+                                            <small id="ten_board_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -262,8 +262,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Subjects</legend>
-                                            <input type="text" class="form-control" id="ten_subjects" name="ten_subjects" placeholder="" value="{{old('ten_subjects')}}" required>
-                                            <span id="ten_subjects_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="ten_subjects" onkeydown="validate()" name="ten_subjects" placeholder="" value="{{old('ten_subjects')}}" required>
+                                            <small id="ten_subjects_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -271,8 +271,9 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Year Of Passing</legend>
-                                            <input type="text" name="ten_passing" id="ten_passing" class="form-control" value="{{old('ten_passing')}}" required>
-                                            <span id="ten_passing_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="ten_passing" id="ten_passing" class="form-control" onkeydown="validate()"  value="{{old('ten_passing')}}" required>
+                                            <input type="text" name="ten_passing" id="ten_passing" class="form-control"  value="{{old('ten_passing')}}" required>
+                                            <small id="ten_passing_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -280,8 +281,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Percentage/CGPA</legend>
-                                            <input type="text" name="ten_percentage" value="{{old('ten_percentage')}}" id="ten_percentage" class="form-control" required>
-                                            <span id="ten_percentage_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="ten_percentage" value="{{old('ten_percentage')}}" onkeydown="validate()" id="ten_percentage" class="form-control" required>
+                                            <small id="ten_percentage_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -302,8 +303,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>School/College Name</legend>
-                                            <input type="text" name="tw_school" id="tw_school" class="form-control" value="{{old('tw_school')}}" required>
-                                            <span id="tw_school_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="tw_school" id="tw_school" class="form-control" value="{{old('tw_school')}}" onkeydown="validate()" required>
+                                            <small id="tw_school_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -311,8 +312,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Board</legend>
-                                            <input type="text" class="form-control" id="tw_board" name="tw_board" value="{{old('tw_board')}}" required>
-                                            <span id="tw_board_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="tw_board" name="tw_board" onkeydown="validate()" value="{{old('tw_board')}}" required>
+                                            <small id="tw_board_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -320,8 +321,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Subjects</legend>
-                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" value="{{old('tw_subjects')}}" placeholder=" PCM/PCB" required>
-                                            <span id="tw_subjects_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" onkeydown="validate()" value="{{old('tw_subjects')}}" placeholder=" PCM/PCB" required>
+                                            <small id="tw_subjects_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -329,8 +330,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Year Of Passing</legend>
-                                            <input type="text" name="tw_passing" id="tw_passing" class="form-control" value="{{old('tw_passing')}}" required>
-                                            <span id="tw_passing_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" name="tw_passing" id="tw_passing" class="form-control" onkeydown="validate()" value="{{old('tw_passing')}}" required>
+                                            <small id="tw_passing_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -338,7 +339,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Percentage</legend>
-                                            <input type="text" name="tw_percentage" id="tw_percentage" class="form-control" value="" value="{{old('tw_percentage')}}" required>
+                                            <input type="text" name="tw_percentage" id="tw_percentage" class="form-control" value="{{old('tw_percentage')}}" required>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -358,8 +359,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>12th Exam Roll Number</legend>
-                                            <input type="text" class="form-control" id="tw_rollno" name="tw_rollno" value="{{old('tw_rollno')}}" required>
-                                            <span id="tw_rollno_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="tw_rollno" name="tw_rollno" onkeydown="validate()" value="{{old('tw_rollno')}}" required>
+                                            <small id="tw_rollno_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -367,22 +368,22 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>JEE MAIN Roll Number</legend>
-                                            <input type="text" class="form-control" id="jee_main_rollno" name="jee_main_rollno" value="{{old('jee_main_rollno')}}" maxlength="8" required>
-                                            <span id="jee_rollno_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="jee_main_rollno" name="jee_main_rollno" onkeydown="validate()" value="{{old('jee_main_rollno')}}" maxlength="8" required>
+                                            <small id="jee_rollno_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <select class="form-control" name="Nationality" value="{{old('Nationality')}}" id="Nationality" required>
+                                    <select class="form-control" onkeydown="validate()" name="Nationality" value="{{old('Nationality')}}" id="Nationality" required>
                                         <option disabled selected>Nationality</option>
                                         <option value="Indian">Indian</option>
                                         <option value="NRI">NRI</option>
                                     </select>
-                                    <span id="nationality_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="nationality_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" name="Religion" id="Religion" value="{{old('Religion')}}" required>
+                                    <select class="form-control" onkeydown="validate()" name="Religion" id="Religion" value="{{old('Religion')}}" required>
                                         <option disabled selected>Religion</option>
                                         <option value="1">Hindu</option>
                                         <option value="2">Muslim</option>
@@ -390,28 +391,28 @@
                                         <option value="4">Christian</option>
                                         <option value="5">Others</option>
                                     </select>
-                                    <span id="religion_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="religion_msg" class="text-danger font-weight-bold" ></small>
                                     <input type="text" name="other_religion" id="other_religion" class="form-control">
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" name="Category" id="Category" value="{{old('Category')}}" required>
+                                    <select class="form-control" onkeydown="validate()" name="Category" id="Category" value="{{old('Category')}}" required>
                                         <option disabled selected>Category</option>
                                         <option value="GEN">GEN</option>
                                         <option value="OBC">OBC</option>
                                         <option value="SC">SC</option>
                                         <option value="ST">ST</option>
                                     </select>
-                                    <span id="category_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="category_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" name="Handicapped" id="Handicapped" value="{{old('Handicapped')}}" required>
+                                    <select class="form-control" onkeydown="validate()" name="Handicapped" id="Handicapped" value="{{old('Handicapped')}}" required>
                                         <option disabled selected>If Physical Handicapped</option>
                                         <option value="Yes">YES</option>
                                         <option value="no">NO</option>
                                     </select>
-                                    <span id="handicapped_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="handicapped_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <div class="form-row">
@@ -420,7 +421,7 @@
                                         <option value="Yes">YES</option>
                                         <option value="no">NO</option>
                                     </select>
-                                    <span id="jkresident_msg" class="text-danger font-weight-bold" ></span>
+                                    <small all id="jkresident_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 </div>
                         </section>
@@ -441,8 +442,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>House No.</legend>
-                                            <input type="text" class="form-control" id="house_no" name="house_no" value="{{old('house_no')}}" required>
-                                            <span id="house_no_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="house_no" name="house_no" value="{{old('house_no')}}" onkeydown="validate()" required>
+                                            <small id="house_no_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -450,8 +451,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Street Name</legend>
-                                            <input type="text" class="form-control" id="street_name" name="street_name" value="{{old('street_name')}}" required>
-                                            <span id="street_name_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="street_name" name="street_name" onkeydown="validate()" value="{{old('street_name')}}" required>
+                                            <small id="street_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -459,8 +460,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Landmark</legend>
-                                            <input type="text" class="form-control" id="landmark" name="landmark" value="{{old('landmark')}}" required>
-                                            <span id="landmark_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="landmark" name="landmark" value="{{old('landmark')}}" onkeydown="validate()" required>
+                                            <small id="landmark_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -468,8 +469,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>City</legend>
-                                            <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required>
-                                            <span id="city_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" onkeydown="validate()" required>
+                                            <small id="city_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -477,8 +478,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>State</legend>
-                                            <input type="text" class="form-control" id="state" name="state" value="{{old('state')}}" required>
-                                            <span id="state_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="state" name="state" value="{{old('state')}}" onkeydown="validate()" required>
+                                            <small id="state_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -486,8 +487,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>PIN CODE</legend>
-                                            <input type="text" class="form-control" id="pincode" name="pincode" value="{{old('pincode')}}" maxlength="6" required>
-                                            <span id="pincode_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" onkeydown="validate()" id="pincode" name="pincode" value="{{old('pincode')}}" maxlength="6" required>
+                                            <small id="pincode_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -497,8 +498,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>House No.</legend>
-                                            <input type="text" class="form-control" id="pahouse_no" name="pahouse_no" value="{{old('pahouse_no')}}" required>
-                                            <span id="pahouse_no_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" onkeydown="validate()" id="pahouse_no" name="pahouse_no" value="{{old('pahouse_no')}}" required>
+                                            <small id="pahouse_no_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -506,8 +507,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Street Name</legend>
-                                            <input type="text" class="form-control" id="pastreet_name" name="pastreet_name" value="{{old('pastreet_name')}}" required>
-                                            <span id="pastreet_name_msg" class="text-danger font-weight-bold" ></span>s
+                                            <input type="text" class="form-control" id="pastreet_name" onkeydown="validate()" name="pastreet_name" value="{{old('pastreet_name')}}" required>
+                                            <small id="pastreet_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -515,8 +516,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Landmark</legend>
-                                            <input type="text" class="form-control" id="palandmark" name="palandmark" value="{{old('palandmark')}}" required>
-                                            <span id="palandmark_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="palandmark" name="palandmark" onkeydown="validate()" value="{{old('palandmark')}}" required>
+                                            <small id="palandmark_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -524,8 +525,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>City</legend>
-                                            <input type="text" class="form-control" id="pacity" name="pacity" value="{{old('pacity')}}" required>
-                                            <span id="pacity_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" onkeydown="validate()" id="pacity" name="pacity" value="{{old('pacity')}}" required>
+                                            <small id="pacity_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -533,8 +534,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>State</legend>
-                                            <input type="text" class="form-control" id="pastate" name="pastate" value="{{old('pastate')}}" required>
-                                            <span id="pastate_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" onkeydown="validate()" class="form-control" id="pastate" name="pastate" value="{{old('pastate')}}" required>
+                                            <small id="pastate_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -542,8 +543,8 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>PIN CODE</legend>
-                                            <input type="text" class="form-control" id="papincode" name="papincode" value="{{old('papincode')}}" maxlength="6" required>
-                                            <span id="papincode_msg" class="text-danger font-weight-bold" ></span>
+                                            <input type="text" class="form-control" id="papincode" name="papincode" onkeydown="validate()" value="{{old('papincode')}}" maxlength="6" required>
+                                            <small id="papincode_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -563,12 +564,12 @@
                                 <br>
                                 <div class="form-row">
                                     <label class="special-label">Organisation In Which Your Father/Mother Belong</label>
-                                    <select class="form-control" name="organisation" value="{{old('organisation')}}" id="organisation" required>
+                                    <select class="form-control" name="organisation" value="{{old('organisation')}}" id="organisation" onkeydown="validate()" required>
                                         <option disabled selected>Select</option>
                                         <option value="bsf">BSF</option>
                                         <option value="capfs">CAPFs</option>
                                     </select>
-                                    <span id="organisation_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="organisation_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <div class="form-row">
@@ -585,12 +586,12 @@
                                         <option value="ors">ORs</option>
                                         <option value="widow">Widow</option>
                                     </select>
-                                    <span id="bsf_rank_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="bsf_rank_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <div class="form-row">
                                     <label class="special-label">If CAPFs</label>
-                                    <select class="form-control" name="capf_option" value="{{old('organisation')}}" id="organisation" required>
+                                    <select class="form-control" name="capf_option" onkeydown="validate()" value="{{old('organisation')}}" id="organisation" required>
                                         <option disabled selected>Select</option>
                                         <option value="crpf">CRPF</option>
                                         <option value="cisf">CISF</option>
@@ -598,7 +599,7 @@
                                         <option value="ssb">SSB</option>
                                         <option value="mp_police">M.P POLICE</option>
                                     </select>
-                                    <span id="capf_option_msg" class="text-danger font-weight-bold" ></span>
+                                    <small id="capf_option_msg" class="text-danger font-weight-bold" ></small>
                                 </div>
                                 <br>
                                 <br>    
