@@ -48,5 +48,50 @@ $('#Religion').on('change', function(){
 });
 
 
+function validate(){
+    var fathername=document.getElementById("Father_name").value;
+
+    if(fathername==""){
+          document.getElementById("father_name_msg").innerHTML="** Please fill Father Name";
+          return false;
+         }
+}
+
+
+function validatefields(){
+
+    var fathername=document.getElementById("Father_name").value;
+       var mothername=document.getElementById("Mother_name").value;
+       var fatherphone=document.getElementById("Father_phone").value;
+       var aadhar=document.getElementById("aadhar").value;
+       var tenthschool=document.getElementById("ten_school").value;
+
+       if(fathername==""){
+          document.getElementById("father_name_msg").innerHTML="** Please fill Father Name";
+          return false;
+         }
+
+       if(mothername==""){
+          document.getElementById("mother_name_msg").innerHTML="** Please fill Mother Name";
+          return false;
+         }
+
+
+       if(fatherphone==""){
+          document.getElementById("father_phone_msg").innerHTML="** Please fill Father's Phone Number";
+          return false;
+         }
+
+
+       if(mobile=="") {
+          document.getElementById("mobilemsg").innerHTML="** Please fill Mobile Field";
+          return false;
+         }
+
+       if(isNaN(mobile)) {
+          document.getElementById("mobilemsg").innerHTML="** alphabat not allowed ";
+          return false;
+         }
+}
 
 
