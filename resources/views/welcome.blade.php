@@ -320,21 +320,50 @@
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
-                                            <legend>Subjects</legend>
-                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" onkeydown="validate()" value="{{old('tw_subjects')}}" placeholder=" PCM/PCB" required>
-                                            <small id="tw_subjects_msg" class="text-danger font-weight-bold" ></small>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-holder form-holder-2">
-                                        <fieldset>
                                             <legend>Year Of Passing</legend>
                                             <input type="text" name="tw_passing" id="tw_passing" class="form-control" onkeydown="validate()" value="{{old('tw_passing')}}" required>
                                             <small id="tw_passing_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
+                                <div class="form-row">
+                                    <select class="form-control" onkeydown="validate()" name="subjects" id="subjects" value="{{old('subjects')}}" required>
+                                        <option disabled selected>subjects</option>
+                                        <option value="pcm">PCM</option>
+                                        <option value="pcb">PCB</option>
+                                        
+                                    </select>
+                                                        
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>physics</legend>
+                                            <input type="text" class="form-control" id="physics_marks" name="physics_marks" placeholder="physics marks" value="{{old('physics_marks')}}"  >
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Chemistry</legend>
+                                            <input type="number" class="form-control" id="Chemistry_marks" name="Chemistry_marks" placeholder="Chemistry mark" value="{{old('Chemistry_marks')}}" >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Biology</legend>
+                                            <input type="text" class="form-control" id="biology_marks" name="biology_marks" placeholder="physics marks" value="{{old('biology_marks')}}" disabled="true" >
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Maths</legend>
+                                            <input type="number" class="form-control" id="maths_marks" name="maths_marks" placeholder="maths_marks" value="{{old('Maths marks')}}" disabled="true" >
+                                        </fieldset>
+                                    </div>
+                                </div>
+
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
@@ -356,6 +385,13 @@
                                     <h3 class="heading">Other Details</h3>
                                 </div>
                                 <div class="form-row">
+                                    <select class="form-control" name="eligibility" value="{{old('eligibility')}}" id="eligibility"  >
+                                        <option disabled selected>Eligibility</option>
+                                        <option value="jee">Jee Based</option>
+                                        <option value="tw">12th Based</option>
+                                    </select>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>12th Exam Roll Number</legend>
@@ -370,6 +406,14 @@
                                             <legend>JEE MAIN Roll Number</legend>
                                             <input type="text" class="form-control" id="jee_main_rollno" name="jee_main_rollno" onkeydown="validate()" value="{{old('jee_main_rollno')}}" maxlength="8" required>
                                             <small id="jee_rollno_msg" class="text-danger font-weight-bold" ></small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>Jee Rank</legend>
+                                            <input type="number" class="form-control" id="jee_rank" name="jee_rank" value="{{old('jee_rank')}}"  >
                                         </fieldset>
                                     </div>
                                 </div>
@@ -611,7 +655,54 @@
                                     <!-- <button type="button" class="btn btn-primary btn-lg" value="submit">submit</button> -->
                                 </div>
                                 </div>
-                        </section>
+                        </section>        
+                        
+                        <!--section 08-->
+                        
+                        <h2>
+                            <p class="step-icon"><span>08</span></p>
+                            <span class="step-text">File Attachements</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="wizard-header">
+                                    <h3 class="heading">File Attachements</h3>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>Your Image </legend>
+                                            <input type="file" class="form-control" id="image" name="image" value="{{old('image')}}"  >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                              <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>10th MarkSheet</legend>
+                                            <input type="file" name="te_marksheet" value="" id="te_marksheet" class="form-control"  >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>12th Marksheet/Admit Card</legend>
+                                            <input type="file" name="tw_certificate" id="12th_percentage" class="form-control" value="" value="{{old('tw_certificate')}}">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>Jee Marksheet/Admit Card </legend>
+                                            <input type="file" class="form-control" id="tw_certificate" name="tw_certificate" value="{{old('12th_certificate')}}"  >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!--end section 08-->
                     </div>
                 </form>
             </div>
