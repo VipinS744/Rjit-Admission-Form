@@ -702,7 +702,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </section><!--end section 08-->
+                        </section><!--end  section 08-->
                     </div>
                 </form>
             </div>
