@@ -153,4 +153,9 @@ class AdmissionController extends Controller
     {
         //
     }
+    public function preview(Request $request)
+    {
+     //echo "mohit";
+        return view("preview",compact("request"));
+    }
 }

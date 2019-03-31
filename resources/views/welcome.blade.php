@@ -21,7 +21,7 @@
     <div class="page-content">
         <div class="form-v1-content">
             <div class="wizard-form">
-                <form class="form-register" onsubmit="return validatefields()" action="/admission" name="registration" method="post" novalidate>
+                <form class="form-register" onsubmit="return validatefields()" action="/admission/pre" name="registration" method="post" novalidate>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div id="form-total">
                         <!-- SECTION 1 -->
@@ -272,7 +272,7 @@
                                         <fieldset>
                                             <legend>Year Of Passing</legend>
                                             <input type="text" name="ten_passing" id="ten_passing" class="form-control" onkeydown="validate()"  value="{{old('ten_passing')}}" required>
-                                            <input type="text" name="ten_passing" id="ten_passing" class="form-control"  value="{{old('ten_passing')}}" required>
+                                            
                                             <small id="ten_passing_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
