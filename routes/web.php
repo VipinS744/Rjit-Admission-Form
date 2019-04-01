@@ -18,3 +18,4 @@ Route::get('/', function () {
 //Route::get("personal", "formController@show");
 
 Route::resource("admission","AdmissionController");
+route::post("admission/pre","AdmissionController@preview");
