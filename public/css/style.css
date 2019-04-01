@@ -1,3 +1,27 @@
+/*USER DEFINED CSS BEGINS*/
+
+.navbar {
+
+    border-bottom:2px #ADD8E6 !important;
+    justify-content: center !important;
+
+}
+
+.card{
+
+    background-color: #fff !important;
+}
+
+.col-md-5{
+    padding-left: 0px !important;
+}
+
+
+
+
+
+/*USER DEFINED CSS ENDS*/
+
 body {
 	margin:  0;
     background-image: url(../images/rjitbg.jpeg);
@@ -589,3 +613,4 @@ body {
 		margin-bottom: 0;
 	}
 }
+
