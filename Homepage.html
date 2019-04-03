@@ -27,6 +27,9 @@
 </head>
 
 <body>
+
+<div class="container-fluid">
+
 	<!-- BODY DESIGN BEGINS -->
 
 <!-- LOGO IMAGE NAVBAR -->
@@ -36,7 +39,7 @@
 	<nav class="navbar navbar-dark ">
 		<div class="navbar-header ">
 			<center>
-				<a class="navbar-brand  mx-auto" href=""><img src="public/images/logo.png"></a>
+				<a class="navbar-brand " href=""><img class="img-fluid" src="public/images/logo.png"></a>
 			</center>			
 	    </div>
 	</nav>
@@ -62,7 +65,7 @@
 	              <div class="row">
 
 	              	<!-- COLUMN-1 BEGINS -->
-	     			 <div class=" col-md-6 order-sm-last card-text" >
+	     			 <div class="col-12 col-md-6 order-md-last card-text" >
 
 	  			      <!-- GUIDELINES FOR ADMISSION BEGINS -->
 
@@ -89,7 +92,7 @@
 	     		<!-- COLUMN-1 ENDS -->
 	     		<!-- COLUMN-2 BEGINS -->
 
-	     			<div class=" col-md-4 order-sm-first" style="background-color: #ddd;">
+	     			<div class="col-12 col-md-4 col-auto order-md-first" style="background-color: #ddd;">
 
 	     				<div class="tab">
 	     					<ul class="nav">
@@ -235,7 +238,7 @@
 
 										      <!-- Modal footer -->
 										      <div class="modal-footer">
-										        <button type="button" class="btn btn-danger" value="submit">Submit</button>
+										        <button type="button" class="btn btn-danger" value="submit"><span class="spinner-grow spinner-grow-sm"></span>Submit</button>
 										      </div>
 
 										  </div>
@@ -246,16 +249,16 @@
 
 
 								<div > 	
-									<form id="" class="" name="" action="" method="post" novalidate="novalidate">
+									<form id="" class="row" name="" action="" method="post" novalidate="novalidate">
 										<fieldset>
 											<input type="hidden" name="ReferURL" value="" id="ReferURL">
 											<legend class="off-screen">Application Login</legend>
 											<label for="ay-login">User Name</label>
-											<input class="form-control" name="UserID" id="ay-login" type="text" required="">
+											<input class="form-control col-md-12" name="UserID" id="ay-login" type="text" required="">
 											<div id="ay-pin-info"></div>
 											<br>
 											<label for="ay-password">Password</label>
-											<input class="form-control" name="Password" id="ay-password" type="password" required="">
+											<input class="form-control col-md-12" name="Password" id="ay-password" type="password" required="">
 											<br>
 											<button class="btn btn-info" value="submit"><i class="fa fa-sign-in fa-lg"></i>Submit</button>
 										</fieldset>
@@ -279,7 +282,7 @@
      	
 
 <!-- MAIN BODY ENDS HERE -->
-
+</div>
 </body>
 
 </html>
