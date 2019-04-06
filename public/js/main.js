@@ -41,9 +41,9 @@ function add_copy(a){
 
 $('#Religion').on('change', function(){
     if( $(this).val() == 5 ){
-        $('#other_religion').show();
+        $('#otherreligion').show();
     } else{
-        $('#other_religion').hide();
+        $('#otherreligion').hide();
     }
 });
 
@@ -221,26 +221,6 @@ function validate(){
           document.getElementById("jkresident_msg").innerHTML="** Please fill 12th %";
           return false;
          }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

@@ -1,3 +1,28 @@
+
+
+
+<<<<<<< HEAD
+=======
+}
+
+.card{
+
+    background-color: #fff !important;
+}
+
+.col-md-5{
+    padding-left: 0px !important;
+}
+
+
+
+
+
+
+
+/*USER DEFINED CSS ENDS*/
+>>>>>>> b45bf86c99b93d853341801766c08af2ed6307b2
+
 body {
 	margin:  0;
     background-image: url(../images/rjitbg.jpeg);
@@ -5,7 +30,7 @@ body {
     background-size: cover;
 }
 
-#other_religion{
+#otherreligion{
     display: none;
 }
 
@@ -589,3 +614,4 @@ body {
 		margin-bottom: 0;
 	}
 }
+

@@ -21,7 +21,7 @@
     <div class="page-content">
         <div class="form-v1-content">
             <div class="wizard-form">
-                <form class="form-register" onsubmit="return validatefields()" action="/admission" name="registration" method="post" novalidate>
+                <form class="form-register" onsubmit="return validatefields()" action="/admission/pre" name="registration" method="post" novalidate>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div id="form-total">
                         <!-- SECTION 1 -->
@@ -144,23 +144,25 @@
                                             <option value="2005">2005</option>
                                             <option value="2004">2004</option>
                                             <option value="2003">2003</option>
-                                            <option value="2012">2002</option>
-                                            <option value="2011">2001</option>
-                                            <option value="2010">2000</option>
-                                            <option value="2009">1999</option>
-                                            <option value="2008">1998</option>
-                                            <option value="2007">1997</option>
-                                            <option value="2006">1996</option>
-                                            <option value="2005">1995</option>
-                                            <option value="2004">1994</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1994">1994</option>
                                             
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
-                                        <legend>Image Upload</legend>
-                                        <input type="file" class="form-control input-border" id="ssn" required>
+                                        <fieldset>
+                                            <legend>Your Image </legend>
+                                            <input type="file" class="form-control" id="image" name="image" value="{{old('image')}}"  >
+                                        </fieldset>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +274,7 @@
                                         <fieldset>
                                             <legend>Year Of Passing</legend>
                                             <input type="text" name="ten_passing" id="ten_passing" class="form-control" onkeydown="validate()"  value="{{old('ten_passing')}}" required>
-                                            <input type="text" name="ten_passing" id="ten_passing" class="form-control"  value="{{old('ten_passing')}}" required>
+                                            
                                             <small id="ten_passing_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
@@ -283,6 +285,14 @@
                                             <legend>Percentage/CGPA</legend>
                                             <input type="text" name="ten_percentage" value="{{old('ten_percentage')}}" onkeydown="validate()" id="ten_percentage" class="form-control" required>
                                             <small id="ten_percentage_msg" class="text-danger font-weight-bold" ></small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>10th MarkSheet</legend>
+                                            <input type="file" name="te_marksheet" value="" id="te_marksheet" class="form-control"  >
                                         </fieldset>
                                     </div>
                                 </div>
@@ -318,11 +328,48 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
+                                    <select class="form-control" onkeydown="validate()" name="subjects" id="subjects" value="{{old('subjects')}}" required>
+                                        <option disabled selected>subjects</option>
+                                        <option value="pcm">PCM</option>
+                                        <option value="pcb">PCB</option>
+                                        
+                                    </select>
+                                                        
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>physics</legend>
+                                            <input type="text" class="form-control" id="physics_marks" name="physics_marks" placeholder="physics marks" value="{{old('physics_marks')}}"  >
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Chemistry</legend>
+                                            <input type="number" class="form-control" id="Chemistry_marks" name="Chemistry_marks" placeholder="Chemistry mark" value="{{old('Chemistry_marks')}}" >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Biology</legend>
+                                            <input type="text" class="form-control" id="biology_marks" name="biology_marks" placeholder="physics marks" value="{{old('biology_marks')}}" disabled="true" >
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-holder">
+                                        <fieldset>
+                                            <legend>Maths</legend>
+                                            <input type="number" class="form-control" id="maths_marks" name="maths_marks" placeholder="maths_marks" value="{{old('Maths marks')}}" disabled="true" >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
-                                            <legend>Subjects</legend>
-                                            <input type="text" class="form-control" id="tw_subjects" name="tw_subjects" onkeydown="validate()" value="{{old('tw_subjects')}}" placeholder=" PCM/PCB" required>
-                                            <small id="tw_subjects_msg" class="text-danger font-weight-bold" ></small>
+                                            <legend>12th Exam Roll Number</legend>
+                                            <input type="text" class="form-control" id="tw_rollno" name="tw_rollno" onkeydown="validate()" value="{{old('tw_rollno')}}" required>
+                                            <small id="tw_rollno_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -343,6 +390,14 @@
                                         </fieldset>
                                     </div>
                                 </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>12th Marksheet/Admit Card</legend>
+                                            <input type="file" name="tw_certificate" id="12th_percentage" class="form-control" value="" value="{{old('tw_certificate')}}">
+                                        </fieldset>
+                                    </div>
+                                </div>
                                 </div>
                         </section>
                         <!-- Section 5 -->
@@ -356,13 +411,11 @@
                                     <h3 class="heading">Other Details</h3>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-holder form-holder-2">
-                                        <fieldset>
-                                            <legend>12th Exam Roll Number</legend>
-                                            <input type="text" class="form-control" id="tw_rollno" name="tw_rollno" onkeydown="validate()" value="{{old('tw_rollno')}}" required>
-                                            <small id="tw_rollno_msg" class="text-danger font-weight-bold" ></small>
-                                        </fieldset>
-                                    </div>
+                                    <select class="form-control" name="eligibility" value="{{old('eligibility')}}" id="eligibility"  >
+                                        <option disabled selected>Eligibility</option>
+                                        <option value="jee">Jee Based</option>
+                                        <option value="tw">12th Based</option>
+                                    </select>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
@@ -370,6 +423,22 @@
                                             <legend>JEE MAIN Roll Number</legend>
                                             <input type="text" class="form-control" id="jee_main_rollno" name="jee_main_rollno" onkeydown="validate()" value="{{old('jee_main_rollno')}}" maxlength="8" required>
                                             <small id="jee_rollno_msg" class="text-danger font-weight-bold" ></small>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>Jee Rank</legend>
+                                            <input type="number" class="form-control" id="jee_rank" name="jee_rank" value="{{old('jee_rank')}}"  >
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <fieldset>
+                                            <legend>Jee Marksheet/Admit Card </legend>
+                                            <input type="file" class="form-control" id="tw_certificate" name="tw_certificate" value="{{old('12th_certificate')}}"  >
                                         </fieldset>
                                     </div>
                                 </div>
@@ -392,7 +461,7 @@
                                         <option value="5">Others</option>
                                     </select>
                                     <small id="religion_msg" class="text-danger font-weight-bold" ></small>
-                                    <input type="text" name="other_religion" id="other_religion" class="form-control">
+                                    <input type="text" name="otherreligion" id="otherreligion" class="form-control">
                                 </div>
                                 <br>
                                 <div class="form-row">
@@ -611,7 +680,7 @@
                                     <!-- <button type="button" class="btn btn-primary btn-lg" value="submit">submit</button> -->
                                 </div>
                                 </div>
-                        </section>
+                        </section>        
                     </div>
                 </form>
             </div>
