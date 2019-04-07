@@ -31,7 +31,7 @@ class AdmissionController extends Controller
     public function create()
     {
    // echo "mohit"; 
-       return view("welcome");
+       return view("form");
     }
 
     /**

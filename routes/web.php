@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
 
 //Route::get("personal", "formController@show");
@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::resource("admission","AdmissionController");
 route::post("admission/pre","AdmissionController@preview");
 // Route::get("login","")
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
