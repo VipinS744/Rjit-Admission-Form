@@ -10,7 +10,16 @@
     <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Main Style Css -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- Main Style Css -->
+
 </head>
 <body>
     <div class="container"> <!-- Logo Container -->
@@ -34,7 +43,39 @@
                                 <div class="wizard-header">
                                     <h3 class="heading">Peronal Infomation</h3>
                                 </div>
-                                <div class="form-row">
+
+                                <br>
+                            <div class="name-content">
+
+                            <div class="field-wrap">
+                                <label>
+                                    First Name<span class="req">*</span>
+                                </label>
+                                <input type="email" name="last-name" id="last-name" required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap">
+                                <label>
+                                    Last Name<span class="req">*</span>
+                                </label>
+                                <input type="email" name="last-name" id="last-name" required autocomplete="off"/>
+                            </div>
+
+                        </div>
+                        <div class="field-wrap">
+                            <label>
+                                Email Address<span class="req">*</span>
+                            </label>
+                            <input type="email" name="email" id="email" required autocomplete="off"/>
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+                                Mobile Number<span class="req">*</span>
+                            </label>
+                            <input type="text" id="phone" name="phone" maxlength="10" required autocomplete="off"/>
+                        </div>
+                                <!-- <div class="form-row">
                                     <div class="form-holder">
                                         <fieldset>
                                             <legend>First Name</legend>
@@ -64,7 +105,7 @@
                                             <input type="text" class="form-control" id="phone" name="phone" placeholder="888-999-7777" maxlength="10" value="{{old('phone')}}" required>
                                         </fieldset>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-row">
                                     <select class="form-control" name="gender" id="gender" value="{{old('gender')}}">
                                         <option value="gender" disabled selected>Gender</option>
@@ -686,9 +727,9 @@
             </div>
         </div>
     </div>
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/jquery.steps.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.steps.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
