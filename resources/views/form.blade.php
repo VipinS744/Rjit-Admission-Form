@@ -5,7 +5,7 @@
     <div class="page-content">
         <div class="form-v1-content">
             <div class="wizard-form">
-                <form class="form-register" onsubmit="return validatefields()" action="/admission/pre" name="registration" method="post" novalidate>
+                <form class="form-register" onsubmit="return validatefields()" action="/admission" name="registration" method="post" enctype="multipart/form-data"  novalidate>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div id="form-total">
                         <!-- SECTION 1 -->
@@ -38,15 +38,16 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Your Email</legend>
-                                            <input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" value="{{old('your_email')}}" placeholder="example@email.com" required>
+                                            <input type="text" name="email" id="email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" value="" placeholder="example@email.com" required>
                                         </fieldset>
                                     </div>
                                 </div>
+                                
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Mobile Number</legend>
-                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="888-999-7777" maxlength="10" value="{{old('phone')}}" required>
+                                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="888-999-7777" maxlength="10" value="{{old('phone')}}" required>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -63,7 +64,6 @@
                                         <small>As per 10th/12th Marksheet</small></label>
                                         <select name="month" id="month" value="{{old('month')}}">
                                             <option value="MM" disabled selected>MM</option>
-                                            <option value="0">Month</option>
                                             <option value="Jan">Jan</option>
                                             <option value="Feb">Feb</option>
                                             <option value="Mar">Mar</option>
@@ -166,7 +166,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father's Name</legend>
-                                            <input type="text" name="Father_name" id="Father_name" class="form-control" placeholder="Enter Full Name" onkeydown="validate()" value="{{old('Father_name')}}" required>
+                                            <input type="text" name="father_name" id="father_name" class="form-control" placeholder="Enter Full Name" onkeydown="validate()" value="{{old('Father_name')}}" required>
                                             <small id="father_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
@@ -175,7 +175,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Mother's Name</legend>
-                                            <input type="text" class="form-control" id="Mother_name" name="Mother_name" onkeydown="validate()" placeholder="Enter Full Name" value="{{old('Mother_name')}}" required>
+                                            <input type="text" class="form-control" id="mother_name" name="mother_name" onkeydown="validate()" placeholder="Enter Full Name" value="{{old('Mother_name')}}" required>
                                             <small id="mother_name_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
@@ -184,7 +184,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father's Email</legend>
-                                            <input type="text" name="Father_email" id="Father_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" value="{{old('Father_email')}}" placeholder="example@email.com">
+                                            <input type="text" name="father_email" id="father_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" value="{{old('Father_email')}}" placeholder="example@email.com">
                                         </fieldset>
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father's Contact Number</legend>
-                                            <input type="text" class="form-control" id="Father_phone" name="Father_phone" onkeydown="validate()" placeholder="888-999-7777" value="{{old('Father_phone')}}" maxlength="10" required>
+                                            <input type="text" class="form-control" id="father_phone" name="father_phone" onkeydown="validate()" placeholder="888-999-7777" value="{{old('Father_phone')}}" maxlength="10" required>
                                             <small id="father_no_msg" class="text-danger font-weight-bold" ></small>
                                         </fieldset>
                                     </div>
@@ -210,7 +210,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Identification Mark</legend>
-                                            <input type="text" name="Identification" id="Identification" class="form-control" placeholder="Black Mole on Neck" value="{{old('Identification')}}" required>
+                                            <input type="text" name="identification" id="identification" class="form-control" placeholder="Black Mole on Neck" value="{{old('Identification')}}" required>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -322,7 +322,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <select class="form-control" style="display: none;" onkeydown="validate()" name="subjects" onchange="subjectsmarks(this.value)" id="subjects" value="{{old('subjects')}}" required>
+                                    <select class="form-control" style="display: none;" onkeydown="validate()" name="tw_subjects" onchange="subjectsmarks(this.value)" id="tw_subjects" value="{{old('subjects')}}" required>
                                         <option disabled selected>subjects</option>
                                         <option value="pcm">PCM</option>
                                         <option value="pcb">PCB</option>
@@ -433,12 +433,12 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Jee Marksheet/Admit Card </legend>
-                                            <input type="file" class="form-control" id="tw_certificate"  name="tw_certificate" value="{{old('12th_certificate')}}"  >
+                                            <input type="file" class="form-control" id="jee_certificate"  name="jee_certificate" value="{{old('12th_certificate')}}"  >
                                         </fieldset>
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <select class="form-control" onkeydown="validate()" name="Nationality" value="{{old('Nationality')}}" id="Nationality" required>
+                                    <select class="form-control" onkeydown="validate()" name="nationality" value="{{old('Nationality')}}" id="nationality" required>
                                         <option disabled selected>Nationality</option>
                                         <option value="Indian">Indian</option>
                                         <option value="NRI">NRI</option>
@@ -447,7 +447,7 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" onkeydown="validate()" onchange="checkreligion(this.value);" name="Religion" id="Religion" value="{{old('Religion')}}" required>
+                                    <select class="form-control" onkeydown="validate()" onchange="checkreligion(this.value);" name="religion" id="religion" value="{{old('Religion')}}" required>
                                         <option disabled selected>Religion</option>
                                         <option value="1">Hindu</option>
                                         <option value="2">Muslim</option>
@@ -460,7 +460,7 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" onkeydown="validate()" name="Category" id="Category" value="{{old('Category')}}" required>
+                                    <select class="form-control" onkeydown="validate()" name="category" id="category" value="{{old('Category')}}" required>
                                         <option disabled selected>Category</option>
                                         <option value="GEN">GEN</option>
                                         <option value="OBC">OBC</option>
@@ -471,7 +471,7 @@
                                 </div>
                                 <br>
                                 <div class="form-row">
-                                    <select class="form-control" onkeydown="validate()" name="Handicapped" id="Handicapped" onchange="checkpwd(this.value)" value="{{old('Handicapped')}}" required>
+                                    <select class="form-control" onkeydown="validate()" name="handicapped" id="handicapped" onchange="checkpwd(this.value)" value="{{old('Handicapped')}}" required>
                                         <option disabled selected>If Physical Handicapped</option>
                                         <option value="Yes">YES</option>
                                         <option value="no">NO</option>
@@ -674,7 +674,7 @@
                                     <div class="form-holder form-holder-2">
                                         <fieldset>
                                             <legend>Father Serving Certificate/Discharge Book</legend>
-                                            <input type="file" name="serving_certficate" id="serving_certficate" class="form-control" value="" value="{{old('serving_certficate')}}">
+                                            <input type="file" name="serving_certificate" id="serving_certificate" class="form-control" value="" value="{{old('serving_certficate')}}">
                                         </fieldset>
                                     </div>
                                 </div>
@@ -682,7 +682,7 @@
                                 <br>    
                                 <div class="form-row" style="justify-content: center;">
                                     <center>
-                                        <button type="submit" class="btn btn-primary btn-lg" name="preview">Preview</button>    
+                                        <button type="submit" class="btn btn-primary btn-lg" name="preview">Submit</button>    
                                     </center>
                                     
                                 </div>

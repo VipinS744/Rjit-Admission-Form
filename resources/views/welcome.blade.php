@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<center>
-				<a href="" class="btn btn-success btech">B.E/B.Tech</a>	
+				<a href="log/create" class="btn btn-success btech">B.E/B.Tech</a>	
 			</center>
 		</div>
 		<div style="border: 0.5px solid	 black; height: 60px; "></div>
