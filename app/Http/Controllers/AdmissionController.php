@@ -148,10 +148,10 @@ class AdmissionController extends Controller
         if($is_saved)
         {
             session()->flash("studentMessage","student is entered ");
-            return redirect("submission");
+            return redirect("welcome");
         }
         else{
-            return redirect("welcome");
+            return redirect("log/create");
         }
         
     }

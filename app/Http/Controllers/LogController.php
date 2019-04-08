@@ -101,13 +101,40 @@ class LogController extends Controller
     {
         //echo "mohit";
         $email=$request->email;
+        $passw=$request->pass;
+        // echo $email.$passw;
 
-                $users = DB::table('users')->where('email',$email)->get();
 
-                if($users){
-                  return view("form",compact("request"));
-                }
+                 $name = DB::table('users')->where('email',$email)->where('confirmpass',$passw)->first();
+                  if($name)
+                  {
+                    return redirect("admission/create");
+                  }
+                  else
+                  {
+                   return redirect("log/create"); 
+                  }
+
+                 // if($names->fname)
+                 // {
+                    // return redirect("admission/create");
+                 // }
+                 // else
+                 // {
+                    // return redirect("log/create");
+                 // }
+                 // }
+                 //echo $chk;
+                 // if($check!="")
+                 // {
+                    // return redirect("admission/create");
+                 // }
+                 // else
+                 // {
+                    // return redirect("log/create");
+                 // }
                 
+                     
 
     }
 

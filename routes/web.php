@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view("form");
+    return view("welcome");
 });
 
 //Route::get("personal", "formController@show");

@@ -170,19 +170,19 @@
                   <label>
                     Email Address<span class="req">*</span>
                   </label>
-                  <input type="email"required autocomplete="off"/>
+                  <input type="email" name="email" id="email" required autocomplete="off"/>
                 </div>
                 
                 <div class="field-wrap">
                   <label>
                     Password<span class="req">*</span>
                   </label>
-                  <input type="password"required autocomplete="off"/>
+                  <input type="password" name="pass" id="pass" required autocomplete="off"/>
                 </div>
 
                 <div class="row">
                   <div class="col-md-6">
-                    <button class="regbtn btn"/>Log In</button>   
+                    <button class="regbtn btn" type="submit">Log In</button>   
                   </div>
 
                   <div class="col-md-6">
