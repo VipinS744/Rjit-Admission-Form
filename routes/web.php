@@ -12,10 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("welcome");
 });
 
 //Route::get("personal", "formController@show");
 
 Route::resource("admission","AdmissionController");
+<<<<<<< HEAD
 route::post("admission/pre","AdmissionController@preview");
+=======
+Route::resource("log","LogController");
+route::post("log/login","LogController@login");
+route::post("admission/pre","AdmissionController@preview");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+>>>>>>> d160890bbd7771b455f78be137a5279d9c02eda2

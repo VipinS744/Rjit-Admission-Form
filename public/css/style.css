@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*USER DEFINED CSS BEGINS*/
 
 .navbar {
@@ -14,25 +15,35 @@
 
 .col-md-5{
     padding-left: 0px !important;
+=======
+
+/*USER DEFINED CSS*/
+
+.pc{
+    display: flex;
+>>>>>>> d160890bbd7771b455f78be137a5279d9c02eda2
 }
 
 
 
+<<<<<<< HEAD
+=======
+/*USER DEFINED CSS*/
+>>>>>>> d160890bbd7771b455f78be137a5279d9c02eda2
 
 
 
 
+<<<<<<< HEAD
 /*USER DEFINED CSS ENDS*/
+=======
+>>>>>>> d160890bbd7771b455f78be137a5279d9c02eda2
 
 body {
 	margin:  0;
     background-image: url(../images/rjitbg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#other_religion{
-    display: none;
 }
 
 .submit_button{
@@ -206,6 +217,7 @@ body {
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
     float: right;
     width: 540px;
+    min-height: 525px;
     background: #fff;
 }
 .form-register .content h2 {

@@ -39,16 +39,110 @@ function add_copy(a){
 }
 
 
-$('#Religion').on('change', function(){
-    if( $(this).val() == 5 ){
-        $('#other_religion').show();
-    } else{
-        $('#other_religion').hide();
-    }
-});
+// Check Result 
+function checkresult(val){
+  var element=document.getElementById('subjects');
+  var element1 =document.getElementsByClassName('pc')
+
+ if(val=='Yes'){
+   element.style.display='block';
+ }
+ else{
+   element.style.display='none';
+  element1[0].style.display='none';
+  element1[1].style.display='none';
+  element1[2].style.display='none';
+  element1[3].style.display='none';
+ }
+}
 
 
-    // forms validation
+// subjects Marks
+function subjectsmarks(val){
+  var element=document.getElementsByClassName('pc');
+  
+ if(val=='pcm'){
+   element[0].style.display='block';
+  element[1].style.display='block';
+  element[2].style.display='none';
+  element[3].style.display='block';
+  }
+
+ else if(val=='pcb'){ 
+  element[0].style.display='block';
+  element[1].style.display='block';
+   element[2].style.display='block';
+   element[3].style.display='none';
+ }
+
+}
+
+
+
+// other religion 
+function checkreligion(val){
+  var element=document.getElementById('otherrel');
+  
+ if(val=='others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+
+// Check Eligibility 
+function checkeligibility(val){
+  var element=document.getElementsByClassName('jeebased');
+
+  if(val=='jee')
+  {
+    element[0].style.display='block';
+    element[1].style.display='block';
+    element[2].style.display='block';
+  }
+  else{
+    element[0].style.display='none';
+    element[1].style.display='none';
+    element[2].style.display='none';
+  }
+}
+
+
+//Check Physically Handicapped
+
+function checkpwd(val){
+  var element=document.getElementById('pwd');
+  
+ if(val=='Yes')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+
+//Parents Organisation 
+ function checkorg(val){
+  var element=document.getElementsByClassName('org');
+  
+ if(val=='bsf'){
+   element[0].style.display='block';
+  element[1].style.display='block';
+  element[2].style.display='block';
+  element[3].style.display='none';
+  }
+
+ else if(val=='capf'){ 
+  element[0].style.display='none';
+  element[1].style.display='none';
+   element[2].style.display='none';
+   element[3].style.display='block';
+ }
+
+}
+
+
+
+// forms validation
 
 function validate(){
 
@@ -221,26 +315,6 @@ function validate(){
           document.getElementById("jkresident_msg").innerHTML="** Please fill 12th %";
           return false;
          }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
